@@ -30,7 +30,7 @@ def prim(graph: nx.Graph):
 
         for node in unprocessed_nodes:
             if (
-                graph.has_edge(w, node)
+                graph.has_edge(nearest_node, node)
                 and graph.edges[nearest_node, node]["weight"] < costs[node]
             ):
                 costs[node] = graph.edges[nearest_node, node]["weight"]
